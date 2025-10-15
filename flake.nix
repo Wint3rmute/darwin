@@ -57,16 +57,7 @@
           plugins = ["git" "sudo"];
           theme = "robbyrussell";
         };
-        programs.helix = {
-          enable = true;
-          defaultEditor = true;
-          # https://docs.helix-editor.com/configuration.html
-          extraConfig = ''
-            theme = "base16_transparent"
-            [editor]
-            line-number = "relative"
-          '';
-        };
+        programs.helix = import ./apps/helix.nix;
         programs.git = {
           enable = true;
           userEmail = "mateusz.baczek1998@gmail.com";
