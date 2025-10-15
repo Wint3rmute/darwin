@@ -58,15 +58,7 @@
           theme = "robbyrussell";
         };
         programs.helix = import ./apps/helix.nix;
-        programs.git = {
-          enable = true;
-          userEmail = "mateusz.baczek1998@gmail.com";
-          userName = "wint3rmute";
-          delta.enable = true;
-          extraConfig = {
-            push.autoSetupRemote = true;
-          };
-        };
+        programs.git = import ./apps/git.nix;
       };
 
       # Necessary for using flakes on this system.
