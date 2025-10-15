@@ -20,26 +20,18 @@
     }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages = [
+      environment.systemPackages = with pkgs; [
         # pkgs.darwin.xcode
-        pkgs.btop
-        pkgs.alejandra
-        pkgs.cargo
-        pkgs.deno
-        pkgs.mpv
-        pkgs.fzf
-        pkgs.duf
-        pkgs.gcc
-        pkgs.fastfetch
-        pkgs.entr
-        pkgs.git
-        pkgs.neovim
-        pkgs.nodejs
-        pkgs.rectangle
-        pkgs.openfortivpn
-        pkgs.starship
-        pkgs.tmux
-        pkgs.vscode
+        # ghostty # TODO: check if available on aarch64
+        btop
+        fzf
+        duf
+        git
+        neovim
+        openfortivpn
+        tmux
+        rectangle
+        vscode
       ];
       users.users.wint3rmute = {
         name = "wint3rmute";
@@ -52,6 +44,17 @@
       home-manager.users.wint3rmute = {
         home.homeDirectory = "/Users/wint3rmute";
         home.stateVersion = "25.05";
+        home.packages = with pkgs; [
+          # signal-desktop
+          alejandra
+          cargo
+          deno
+          mpv
+          gcc
+          fastfetch
+          entr
+          nodejs
+        ];
         programs.zsh.enable = true;
         programs.zsh.oh-my-zsh = {
           enable = true;
