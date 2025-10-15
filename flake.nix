@@ -29,6 +29,8 @@
         git
         neovim
         openfortivpn
+        openconnect
+        nmap
         tmux
         rectangle
         vscode
