@@ -60,9 +60,21 @@
         programs.helix = {
           enable = true;
           defaultEditor = true;
+          # https://docs.helix-editor.com/configuration.html
           extraConfig = ''
             theme = "base16_transparent"
+            [editor]
+            line-number = "relative"
           '';
+        };
+        programs.git = {
+          enable = true;
+          userEmail = "mateusz.baczek1998@gmail.com";
+          userName = "wint3rmute";
+          delta.enable = true;
+          extraConfig = {
+            push.autoSetupRemote = true;
+          };
         };
       };
 
