@@ -35,6 +35,7 @@
         pkgs.git
         pkgs.neovim
         pkgs.nodejs
+        pkgs.rectangle
         pkgs.openfortivpn
         pkgs.starship
         pkgs.tmux
