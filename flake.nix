@@ -57,8 +57,12 @@
           fastfetch
           entr
           nodejs
+          zoxide
         ];
         programs.zsh.enable = true;
+        programs.zsh.initContent = ''
+          eval "$(zoxide init zsh --cmd cd)"
+        '';
         programs.zsh.oh-my-zsh = {
           enable = true;
           plugins = ["git" "sudo"];
