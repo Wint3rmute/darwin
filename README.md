@@ -9,3 +9,7 @@ make flake           # Update flake inputs
 make nix             # Rebuild configuration
 make os              # Update macOS
 ```
+
+## References
+
+- https://nix-community.github.io/home-manager/options.xhtml

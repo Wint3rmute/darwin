@@ -18,65 +18,27 @@
       home-manager,
       ...
     }: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
-      environment.systemPackages = with pkgs; [
-        # pkgs.darwin.xcode
-        # ghostty # TODO: check if available on aarch64
-        btop
-        fzf
-        duf
-        git
-        neovim
-        openfortivpn
-        openconnect
-        nmap
-        tmux
-        rectangle
-        vscode
-        signal-desktop-bin
-      ];
+      home-manager.users.wint3rmute = {
+        imports = [
+          ./modules/home_packages.nix
+          ./modules/helix.nix
+          ./modules/git.nix
+        ];
+        home.homeDirectory = "/Users/wint3rmute";
+        home.stateVersion = "25.05";
+      };
+
       users.users.wint3rmute = {
         name = "wint3rmute";
         home = "/Users/wint3rmute";
       };
 
-      # programs.zsh.enableCompletion
+      # for programs.zsh.enableCompletion. Comment in docs:
       # Enable zsh completion. Don’t forget to add
       environment.pathsToLink = ["/share/zsh"];
 
-      # https://nix-community.github.io/home-manager/options.xhtml
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.wint3rmute = {
-        home.homeDirectory = "/Users/wint3rmute";
-        home.stateVersion = "25.05";
-        home.packages = with pkgs; [
-          # signal-desktop
-          alejandra
-          cargo
-          deno
-          mpv
-          gcc
-          fastfetch
-          entr
-          nodejs
-          zoxide
-        ];
-        programs.zsh.enable = true;
-        programs.zsh.enableCompletion = true;
-        programs.zsh.initContent = ''
-          eval "$(zoxide init zsh --cmd cd)"
-        '';
-        programs.fzf.enableZshIntegration = true;
-        programs.zsh.oh-my-zsh = {
-          enable = true;
-          plugins = ["git" "sudo"];
-          theme = "robbyrussell";
-        };
-        programs.helix = import ./apps/helix.nix;
-        programs.git = import ./apps/git.nix;
-      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -95,12 +57,11 @@
     };
   in {
     formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Mateuszs-MacBook-Air
     darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [
         home-manager.darwinModules.home-manager
         configuration
+        ./modules/global_packages.nix
       ];
     };
   };
