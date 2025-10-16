@@ -1,0 +1,31 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Nix
+      uses: cachix/install-nix-action@v22
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        extra_nix_config: |
+          experimental-features = nix-command flakes
+    
+    - name: Check flake
+      run: nix flake check
+    
+    - name: Build configuration
+      run: nix build .#darwinConfigurations."Mateuszs-MacBook-Air".system
+    
+    - name: Check formatting
+      run: |
+        nix fmt
+        git diff --exit-code
