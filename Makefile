@@ -3,13 +3,13 @@ all: fmt update rebuild softwareupdate
 fmt:
 	nix fmt .
 
-update:
+flake:
 	nix flake update
 	
-rebuild:
+nix:
 	sudo darwin-rebuild --flake . switch
 	
-softwareupdate:
+os:
 	sudo softwareupdate -ia
 
-.PHONY: all update rebuild softwareupdate
+.PHONY: all flake nix os

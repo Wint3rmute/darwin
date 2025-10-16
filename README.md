@@ -5,7 +5,7 @@
 ```bash
 make                 # Run everything
 make fmt             # Format code
-make update          # Update flake inputs  
-make rebuild         # Rebuild configuration
-make softwareupdate  # Update macOS
+make flake           # Update flake inputs  
+make nix             # Rebuild configuration
+make os              # Update macOS
 ```
