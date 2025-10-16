@@ -35,11 +35,15 @@
         rectangle
         vscode
         signal-desktop-bin
-        ];
+      ];
       users.users.wint3rmute = {
         name = "wint3rmute";
         home = "/Users/wint3rmute";
       };
+
+      # programs.zsh.enableCompletion
+      # Enable zsh completion. Don’t forget to add
+      environment.pathsToLink = ["/share/zsh"];
 
       # https://nix-community.github.io/home-manager/options.xhtml
       home-manager.useGlobalPkgs = true;
@@ -60,9 +64,11 @@
           zoxide
         ];
         programs.zsh.enable = true;
+        programs.zsh.enableCompletion = true;
         programs.zsh.initContent = ''
           eval "$(zoxide init zsh --cmd cd)"
         '';
+        programs.fzf.enableZshIntegration = true;
         programs.zsh.oh-my-zsh = {
           enable = true;
           plugins = ["git" "sudo"];
