@@ -1,4 +1,7 @@
-all: update rebuild softwareupdate
+all: fmt update rebuild softwareupdate
+
+fmt:
+	nix fmt .
 
 update:
 	nix flake update

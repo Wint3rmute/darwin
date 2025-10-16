@@ -3,16 +3,9 @@
 ## Usage
 
 ```bash
-sudo darwin-rebuild --flake . switch
-```
-
-## Updating
-
-```bash
-nix flake update
-```
-## Formatting
-
-```bash
-nix fmt .
+make                 # Run everything
+make fmt             # Format code
+make update          # Update flake inputs  
+make rebuild         # Rebuild configuration
+make softwareupdate  # Update macOS
 ```
