@@ -1,4 +1,4 @@
-all: fmt update rebuild softwareupdate
+all: fmt flake nix os
 
 fmt:
 	nix fmt .
@@ -12,4 +12,4 @@ nix:
 os:
 	sudo softwareupdate -ia
 
-.PHONY: all flake nix os
+.PHONY: all fmt flake nix os

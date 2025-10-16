@@ -23,6 +23,7 @@
           ./modules/home_packages.nix
           ./modules/helix.nix
           ./modules/git.nix
+          ./modules/zsh.nix
         ];
         home.homeDirectory = "/Users/wint3rmute";
         home.stateVersion = "25.05";
