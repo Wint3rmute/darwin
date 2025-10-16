@@ -1,0 +1,61 @@
+# Nix build outputs
+result
+result-*
+
+# Nix store symlinks
+/result
+/result-*
+
+# Direnv
+.direnv/
+.envrc
+
+# Nix development shell
+shell.nix
+.nix-shell
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.#*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# OS generated files
+*.pid
+*.seed
+*.cover
+
+# Darwin rebuild backup files
+*.backup
+
+# Nix garbage collection protection
+.gcroots
+
+# Local configuration overrides
+local.nix
+secrets.nix
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Cache directories
+.cache/
+cache/
