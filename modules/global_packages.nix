@@ -10,17 +10,18 @@
   environment.systemPackages = with pkgs; [
     # pkgs.darwin.xcode
     # ghostty # TODO: check if available on aarch64
+    # firefox # TODO: build errors!?
     btop
-    fzf
     duf
+    fzf
     git
-    obsidian
-    openfortivpn
-    openconnect
     nmap
-    tmux
+    obsidian
+    openconnect
+    openfortivpn
     rectangle
-    vscode
     signal-desktop-bin
+    tmux
+    vscode
   ];
 }
