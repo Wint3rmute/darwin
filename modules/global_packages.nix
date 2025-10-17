@@ -15,7 +15,6 @@
     duf
     git
     obsidian
-    neovim
     openfortivpn
     openconnect
     nmap

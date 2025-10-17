@@ -6,10 +6,10 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # signal-desktop
     alejandra
     cargo
     deno
+    neovim
     mpv
     gcc
     fastfetch
