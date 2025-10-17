@@ -14,6 +14,7 @@
     fzf
     duf
     git
+    obsidian
     neovim
     openfortivpn
     openconnect
