@@ -22,5 +22,6 @@
     rectangle
     vscode
     signal-desktop-bin
+    openvpn3
   ];
 }
