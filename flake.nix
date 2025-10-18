@@ -38,6 +38,8 @@
       # Enable zsh completion. Don’t forget to add
       environment.pathsToLink = ["/share/zsh"];
 
+      services.tailscale.enable = true;
+
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
 
