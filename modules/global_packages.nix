@@ -17,6 +17,7 @@
     git
     nmap
     obsidian
+    slack
     openconnect
     openfortivpn
     rectangle
