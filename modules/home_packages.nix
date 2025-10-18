@@ -11,7 +11,8 @@
     deno
     neovim
     mpv
-    gcc
+    typescript-language-server
+    rust-analyzer
     fastfetch
     entr
     nodejs

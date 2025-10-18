@@ -13,7 +13,7 @@
       theme = "base16_transparent"
       [editor]
       line-number = "relative"
-      
+
       [keys.normal]
       "0" = "goto_line_start"
       "C-r" = "redo"
@@ -28,5 +28,13 @@
       "/" = "toggle_comments"
       "s" = "global_search"
     '';
+    languages = {
+      language = [
+        {
+          name = "rust";
+          auto-format = true;
+        }
+      ];
+    };
   };
 }

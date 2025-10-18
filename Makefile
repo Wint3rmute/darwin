@@ -1,4 +1,4 @@
-all: fmt flake nix os
+all: fmt flake nix garbage os
 
 fmt:
 	nix fmt .
@@ -12,4 +12,7 @@ nix:
 os:
 	sudo softwareupdate -ia
 
-.PHONY: all fmt flake nix os
+garbge:
+	sudo nix-collect-garbage -m
+
+.PHONY: all fmt flake nix os garbage
