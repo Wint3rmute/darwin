@@ -31,8 +31,9 @@
     languages = {
       language = [
         {
-          name = "rust";
+          name = "tsx";
           auto-format = true;
+          # formatter = { command = "deno"; args = ["fmt"]; };
         }
       ];
     };
