@@ -20,7 +20,7 @@
     openconnect
     openfortivpn
     rectangle
-    signal-desktop-bin
+    # signal-desktop-bin # Outdated :(
     tmux
     vscode
   ];
