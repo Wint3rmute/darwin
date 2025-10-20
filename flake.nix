@@ -8,8 +8,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     agenix = {
       url = "github:ryantm/agenix";
-      # inputs.darwin.follows = "nixpkgs";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs = inputs @ {
@@ -22,7 +22,6 @@
     configuration = {
       pkgs,
       home-manager,
-      agenix,
       ...
     }: {
       home-manager.users.wint3rmute = {
@@ -36,8 +35,7 @@
         home.stateVersion = "25.05";
       };
 
-      # TODO: does not work
-      # environment.systemPackages = [ agenix.packages.aarch64-darwin.default ];
+      environment.systemPackages = [agenix.packages.aarch64-darwin.default];
 
       users.users.wint3rmute = {
         name = "wint3rmute";
