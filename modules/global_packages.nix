@@ -19,6 +19,7 @@
     obsidian
     slack
     openconnect
+    gimp2
     openfortivpn
     rectangle
     # signal-desktop-bin # Outdated :(

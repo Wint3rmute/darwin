@@ -17,5 +17,6 @@
     entr
     nodejs
     zoxide
+    poetry
   ];
 }
