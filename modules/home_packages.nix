@@ -7,16 +7,17 @@
 }: {
   home.packages = with pkgs; [
     alejandra
+    ansible
     cargo
     deno
-    neovim
-    mpv
-    typescript-language-server
-    rust-analyzer
-    fastfetch
     entr
+    fastfetch
+    mpv
+    neovim
     nodejs
-    zoxide
     poetry
+    rust-analyzer
+    typescript-language-server
+    zoxide
   ];
 }

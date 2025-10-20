@@ -20,6 +20,8 @@
     slack
     openconnect
     gimp2
+    ncdu
+    wireguard-tools
     openfortivpn
     rectangle
     # signal-desktop-bin # Outdated :(
