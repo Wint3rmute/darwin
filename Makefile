@@ -12,7 +12,7 @@ nix:
 os:
 	sudo softwareupdate -ia
 
-garbge:
-	sudo nix-collect-garbage -m
+garbage:
+	sudo nix-collect-garbage
 
 .PHONY: all fmt flake nix os garbage
