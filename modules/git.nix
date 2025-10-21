@@ -7,11 +7,15 @@
 }: {
   programs.git = {
     enable = true;
-    userEmail = "mateusz.baczek1998@gmail.com";
-    userName = "wint3rmute";
-    delta.enable = true;
-    extraConfig = {
+    settings.user = {
+      email = "mateusz.baczek1998@gmail.com";
+      name = "wint3rmute";
+    };
+    settings = {
       push.autoSetupRemote = true;
     };
   };
+
+  # Syntax highlighting for `git diff`
+  programs.delta.enable = true;
 }
