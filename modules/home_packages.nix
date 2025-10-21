@@ -19,5 +19,7 @@
     rust-analyzer
     typescript-language-server
     zoxide
+    graphviz
+    zola
   ];
 }
