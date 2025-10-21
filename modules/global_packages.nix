@@ -21,6 +21,7 @@
     openconnect
     gimp2
     ncdu
+    uutils-coreutils-noprefix
     wireguard-tools
     openfortivpn
     rectangle
