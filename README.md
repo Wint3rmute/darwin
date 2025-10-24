@@ -7,9 +7,10 @@ make                 # Run everything
 make fmt             # Format code
 make flake           # Update flake inputs  
 make nix             # Rebuild configuration
+make garbage         # Nix garbage collection
 make os              # Update macOS
 ```
 
-## References
+## Reference
 
 - https://nix-community.github.io/home-manager/options.xhtml
