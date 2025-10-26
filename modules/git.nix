@@ -14,6 +14,7 @@
     settings = {
       push.autoSetupRemote = true;
     };
+    lfs.enable = true;
   };
 
   # Syntax highlighting for `git diff`
