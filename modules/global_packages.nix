@@ -28,5 +28,6 @@
     # signal-desktop-bin # Outdated :(
     tmux
     vscode
+    zathura
   ];
 }

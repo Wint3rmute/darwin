@@ -12,14 +12,15 @@
     deno
     entr
     fastfetch
+    graphviz
     mpv
     neovim
     nodejs
     poetry
     rust-analyzer
     typescript-language-server
-    zoxide
-    graphviz
+    typst
     zola
+    zoxide
   ];
 }
