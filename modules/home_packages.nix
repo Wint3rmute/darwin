@@ -22,5 +22,6 @@
     typst
     zola
     zoxide
+    tinymist
   ];
 }
