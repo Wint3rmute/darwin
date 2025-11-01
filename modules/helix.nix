@@ -28,14 +28,23 @@
       "/" = "toggle_comments"
       "s" = "global_search"
     '';
+    # Typescript, Deno, Helix
+    # https://docs.deno.com/runtime/getting_started/setup_your_environment/#helix
     languages = {
       language = [
         {
-          name = "tsx";
+          name = "typescript";
           auto-format = true;
-          # formatter = { command = "deno"; args = ["fmt"]; };
+          roots = ["deno.json" "deno.jsonc" "package.json"];
+          file-types = ["ts" "tsx"];
+          language-servers = ["deno-lsp"];
         }
       ];
+      language-server.deno-lsp = {
+        command = "deno";
+        args = ["lsp"];
+        config.deno.enable = true;
+      };
     };
   };
 }
