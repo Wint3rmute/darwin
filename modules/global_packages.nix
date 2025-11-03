@@ -21,6 +21,7 @@
     openconnect
     gimp2
     ncdu
+    spotify
     uutils-coreutils-noprefix
     wireguard-tools
     openfortivpn
