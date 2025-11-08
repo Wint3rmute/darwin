@@ -23,5 +23,6 @@
     zola
     zoxide
     tinymist
+    rustfmt
   ];
 }
