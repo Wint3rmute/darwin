@@ -8,7 +8,7 @@
   home.packages = with pkgs; [
     alejandra
     ansible
-    cargo
+    rustup
     deno
     entr
     fastfetch
@@ -17,12 +17,10 @@
     neovim
     nodejs
     poetry
-    rust-analyzer
     typescript-language-server
     typst
     zola
     zoxide
     tinymist
-    rustfmt
   ];
 }
