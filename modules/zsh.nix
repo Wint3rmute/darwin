@@ -12,6 +12,9 @@
     initContent = ''
       eval "$(zoxide init zsh --cmd cd)"
     '';
+    envExtra =''
+    export PATH="$HOME/.cargo/bin:$PATH"
+    '';
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "sudo"];
