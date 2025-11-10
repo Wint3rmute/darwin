@@ -12,8 +12,8 @@
     initContent = ''
       eval "$(zoxide init zsh --cmd cd)"
     '';
-    envExtra =''
-    export PATH="$HOME/.cargo/bin:$PATH"
+    envExtra = ''
+      export PATH="$HOME/.cargo/bin:$PATH"
     '';
     oh-my-zsh = {
       enable = true;
