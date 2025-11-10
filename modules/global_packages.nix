@@ -19,6 +19,7 @@
     obsidian
     slack
     openconnect
+    openscad
     gimp2
     ncdu
     spotify
