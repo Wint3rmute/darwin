@@ -9,6 +9,7 @@
     alejandra
     ansible
     rustup
+    yt-dlp
     deno
     entr
     fastfetch
