@@ -11,6 +11,7 @@
     rustup
     yt-dlp
     deno
+    ffmpeg
     entr
     fastfetch
     graphviz

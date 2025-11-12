@@ -19,6 +19,7 @@
     obsidian
     slack
     openconnect
+    audacity
     openscad
     gimp2
     ncdu
