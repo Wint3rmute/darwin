@@ -12,6 +12,7 @@
     yt-dlp
     deno
     ffmpeg
+    uv
     entr
     fastfetch
     graphviz
