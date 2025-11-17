@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     alejandra
     ansible
+    jdk
     rustup
     yt-dlp
     deno
