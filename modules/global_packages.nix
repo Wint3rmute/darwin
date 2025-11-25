@@ -12,6 +12,7 @@
     # ghostty # TODO: check if available on aarch64
     # firefox # TODO: build errors!?
     btop
+    discord
     duf
     fzf
     git
