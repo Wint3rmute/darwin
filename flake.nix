@@ -41,6 +41,7 @@
         name = "wint3rmute";
         home = "/Users/wint3rmute";
       };
+      system.primaryUser = "wint3rmute";
 
       # for programs.zsh.enableCompletion. Comment in docs:
       # Enable zsh completion. Don’t forget to add
@@ -74,6 +75,7 @@
         ./modules/hosts.nix
         ./modules/global_packages.nix
         ./modules/macos.nix
+        ./modules/homebrew.nix
       ];
     };
   };

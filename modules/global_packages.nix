@@ -11,27 +11,12 @@
     # pkgs.darwin.xcode
     # ghostty # TODO: check if available on aarch64
     # firefox # TODO: build errors!?
-    btop
-    discord
-    duf
-    fzf
-    git
-    nmap
-    obsidian
-    slack
     openconnect
-    audacity
     openscad
-    gimp2
-    ncdu
-    spotify
     uutils-coreutils-noprefix
     wireguard-tools
     openfortivpn
     rectangle
-    # signal-desktop-bin # Outdated :(
-    tmux
-    vscode
   ];
 
   networking.extraHostsLines = [
