@@ -71,6 +71,7 @@
         agenix.nixosModules.default
         home-manager.darwinModules.home-manager
         configuration
+        ./modules/hosts.nix
         ./modules/global_packages.nix
       ];
     };
