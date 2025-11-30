@@ -8,23 +8,29 @@
   home.packages = with pkgs; [
     alejandra
     ansible
-    jdk
-    rustup
-    yt-dlp
+    btop
     deno
-    ffmpeg
-    uv
+    duf
     entr
     fastfetch
+    ffmpeg
+    fzf
     graphviz
+    jdk
     mpv
+    ncdu
     neovim
+    nmap
     nodejs
     poetry
+    rustup
+    tinymist
+    tmux
     typescript-language-server
     typst
+    uv
+    yt-dlp
     zola
     zoxide
-    tinymist
   ];
 }
