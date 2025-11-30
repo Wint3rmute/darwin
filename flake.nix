@@ -73,6 +73,7 @@
         configuration
         ./modules/hosts.nix
         ./modules/global_packages.nix
+        ./modules/macos.nix
       ];
     };
   };
