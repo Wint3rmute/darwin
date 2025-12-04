@@ -40,6 +40,7 @@
       users.users.wint3rmute = {
         name = "wint3rmute";
         home = "/Users/wint3rmute";
+        uid = 501;
       };
       system.primaryUser = "wint3rmute";
 
