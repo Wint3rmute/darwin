@@ -16,17 +16,19 @@
     #   "mas" # Mac App Store CLI
     # ];
     casks = [
-      "ghostty"
-      "firefox"
-      "orion"
-      "spotify"
-      "gimp"
-      "discord"
-      "obsidian"
-      "slack"
       "audacity"
-      "visual-studio-code"
+      "discord"
+      "firefox"
+      "ghostty"
+      "gimp"
+      "keepassxc"
+      "nextcloud"
+      "obsidian"
+      "orion"
       "signal"
+      "slack"
+      "spotify"
+      "visual-studio-code"
     ];
     # masApps = {
     #   "Amphetamine" = 937984704;
