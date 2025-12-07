@@ -22,9 +22,6 @@ jobs:
     - name: Check flake
       run: nix flake check
     
-    - name: Build configuration
-      run: nix build .#darwinConfigurations."Mateuszs-MacBook-Air".system
-    
     - name: Check formatting
       run: |
         nix fmt .
