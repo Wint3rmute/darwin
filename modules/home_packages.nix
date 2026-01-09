@@ -7,6 +7,7 @@
 }: {
   home.packages = with pkgs; [
     alejandra
+    awscli
     ansible
     btop
     deno
