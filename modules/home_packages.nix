@@ -19,7 +19,7 @@
     graphviz
     lilypond-unstable
     jdk
-    mpv
+    # mpv
     ncdu
     neovim
     nmap
