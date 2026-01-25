@@ -17,6 +17,7 @@
     ffmpeg
     fzf
     graphviz
+    lilypond-unstable
     jdk
     mpv
     ncdu
