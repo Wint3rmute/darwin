@@ -29,6 +29,7 @@
       "slack"
       "spotify"
       "visual-studio-code"
+      "vlc"
     ];
     # masApps = {
     #   "Amphetamine" = 937984704;
