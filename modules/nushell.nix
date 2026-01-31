@@ -14,6 +14,9 @@ $env.PATH = $env.PATH ++ [
   "/etc/profiles/per-user/wint3rmute/bin",
 ];
 
+# Disables the startup banner
+$env.config.show_banner = false
+
 # Helper functions to get branch names
 def git_main_branch [] {
     let branches = (git branch -r | lines | str trim)
@@ -105,11 +108,9 @@ alias gmff = git merge --ff-only
 alias gf = git fetch
 alias gfa = git fetch --all --tags --prune
 alias gcp = git cherry-pick
-alias grt = cd (git rev-parse --show-toplevel)
-alias gwip = git add -A; git commit -m "WIP"
 
-# mkdir ($nu.data-dir | path join "vendor/autoload")
-# starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 $env.STARSHIP_SHELL = "nu"
 
@@ -128,7 +129,7 @@ $env.PROMPT_INDICATOR_VI_INSERT = ": "
 $env.PROMPT_INDICATOR_VI_NORMAL = "〉"
 $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
-source ~/.config/zoxide.nu
+# source ~/.config/zoxide.nu
 '';
 
   home.file.".config/zoxide.nu".text = ''
