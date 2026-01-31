@@ -11,10 +11,11 @@
     # pkgs.darwin.xcode
     # ghostty # TODO: check if available on aarch64
     # firefox # TODO: build errors!?
+    nushell
     openconnect
+    rectangle
     uutils-coreutils-noprefix
     wireguard-tools
-    rectangle
   ];
 
   networking.extraHostsLines = [
