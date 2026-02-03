@@ -19,6 +19,7 @@
       "audacity"
       "discord"
       "firefox"
+      "tigervnc"
       "ghostty"
       "gimp"
       "keepassxc"
