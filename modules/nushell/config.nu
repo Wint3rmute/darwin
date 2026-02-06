@@ -4,6 +4,7 @@ $env.PATH = $env.PATH ++ [
   "/nix/var/nix/profiles/default/bin",
   "/Users/wint3rmute/.nix-profile/bin",
   "/etc/profiles/per-user/wint3rmute/bin",
+  "~/.local/bin",
 ];
 
 # Disables the startup banner
