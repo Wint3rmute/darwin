@@ -19,7 +19,6 @@
       "audacity"
       "discord"
       "firefox"
-      "tigervnc"
       "ghostty"
       "gimp"
       "keepassxc"
@@ -29,6 +28,7 @@
       "signal"
       "slack"
       "spotify"
+      "tigervnc"
       "visual-studio-code"
       "vlc"
     ];
