@@ -10,6 +10,8 @@ $env.PATH = $env.PATH ++ [
 # Disables the startup banner
 $env.config.show_banner = false
 
+$env.EDITOR = "hx"
+
 # Helper functions to get branch names
 def git_main_branch [] {
     let branches = (git branch -r | lines | str trim)
