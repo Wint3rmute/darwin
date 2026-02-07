@@ -72,13 +72,14 @@
     formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
     darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [
-        agenix.nixosModules.default
-        home-manager.darwinModules.home-manager
+        agenix.darwinModules.default
         configuration
+        home-manager.darwinModules.home-manager
         ./modules/hosts.nix
         ./modules/global_packages.nix
         ./modules/macos.nix
         ./modules/homebrew.nix
+        ./modules/wireguard.nix
       ];
     };
   };

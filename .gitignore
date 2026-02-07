@@ -47,10 +47,6 @@ Thumbs.db
 # Nix garbage collection protection
 .gcroots
 
-# Local configuration overrides
-local.nix
-secrets.nix
-
 # Build artifacts
 dist/
 build/
