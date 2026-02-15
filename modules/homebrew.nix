@@ -22,7 +22,6 @@
       "ghostty"
       "gimp"
       "keepassxc"
-      "html-mangareader"
       "nextcloud"
       "obsidian"
       "orion"
@@ -32,6 +31,7 @@
       "tigervnc"
       "visual-studio-code"
       "vlc"
+      "yacreader"
     ];
     # masApps = {
     #   "Amphetamine" = 937984704;
