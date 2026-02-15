@@ -16,6 +16,7 @@
     fastfetch
     ffmpeg
     fzf
+    go
     graphviz
     lilypond-unstable
     jdk
@@ -24,7 +25,7 @@
     neovim
     nmap
     nodejs
-    poetry
+    # poetry
     rustup
     tinymist
     tmux
