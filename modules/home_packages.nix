@@ -16,7 +16,6 @@
     fastfetch
     ffmpeg
     fzf
-    go
     graphviz
     lilypond-unstable
     jdk
