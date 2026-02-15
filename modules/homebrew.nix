@@ -21,6 +21,7 @@
       "firefox"
       "ghostty"
       "gimp"
+      "hakuneko"
       "keepassxc"
       "nextcloud"
       "obsidian"
