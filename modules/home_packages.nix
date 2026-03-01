@@ -31,7 +31,7 @@
     typescript-language-server
     typst
     uv
-    yt-dlp
+    # yt-dlp
     zola
     zoxide
   ];
