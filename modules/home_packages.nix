@@ -30,6 +30,7 @@
     tmux
     typescript-language-server
     typst
+    tldr
     uv
     # yt-dlp
     zola
