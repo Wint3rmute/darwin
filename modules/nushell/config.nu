@@ -94,6 +94,10 @@ alias gsta = git stash push
 alias gsts = git stash show --patch
 
 # Merge & Rebase commands
+alias grb = git rebase
+alias grbi = git rebase --interactive
+alias grbc = git rebase --continue
+alias grba = git rebase --abort
 alias gm = git merge
 alias gma = git merge --abort
 alias gms = git merge --squash
