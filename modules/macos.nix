@@ -21,6 +21,9 @@
       QuitMenuItem = true;
       ShowPathbar = true;
       ShowStatusBar = true;
+
+      # Removes trash after 30 days
+      FXRemoveOldTrashItems = true;
     };
 
     # Trackpad
