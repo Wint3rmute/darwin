@@ -21,6 +21,7 @@
     jdk
     # mpv
     ncdu
+    nil
     neovim
     nmap
     nodejs
