@@ -29,6 +29,7 @@
       "slack"
       "spotify"
       "tigervnc"
+      "telegram"
       "visual-studio-code"
       "vlc"
       "yacreader"
