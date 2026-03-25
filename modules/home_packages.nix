@@ -33,7 +33,7 @@
     typst
     tldr
     uv
-    # yt-dlp
+    yt-dlp
     zola
     zoxide
   ];
