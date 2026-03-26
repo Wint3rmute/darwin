@@ -14,6 +14,8 @@
     nushell
     openconnect
     rectangle
+    ripgrep
+    sd
     uutils-coreutils-noprefix
     wireguard-tools
   ];
