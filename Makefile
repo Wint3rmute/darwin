@@ -5,8 +5,11 @@ fmt:
 
 flake:
 	nix flake update
+
+build:
+	darwin-rebuild --flake . build
 	
-nix:
+switch:
 	sudo darwin-rebuild --flake . switch
 
 commit:
@@ -18,4 +21,4 @@ os:
 garbage:
 	sudo nix-collect-garbage
 
-.PHONY: all fmt flake nix os garbage commit
+.PHONY: all fmt flake build switch os garbage commit
