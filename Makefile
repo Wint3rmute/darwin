@@ -1,4 +1,4 @@
-all: fmt flake nix commit garbage os
+all: fmt flake build switch commit garbage os
 
 fmt:
 	nix fmt .

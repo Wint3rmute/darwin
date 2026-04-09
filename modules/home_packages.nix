@@ -25,6 +25,7 @@
     neovim
     nmap
     nodejs
+    ollama
     # poetry
     rustup
     tinymist
