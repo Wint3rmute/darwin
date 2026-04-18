@@ -23,6 +23,7 @@
       "gimp"
       "keepassxc"
       "nextcloud"
+      "microsoft-teams"
       "obsidian"
       "orion"
       "signal"
