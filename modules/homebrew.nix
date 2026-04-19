@@ -20,6 +20,7 @@
       "discord"
       "firefox"
       "ghostty"
+      "godot"
       "gimp"
       "keepassxc"
       "nextcloud"
