@@ -25,6 +25,7 @@
       "keepassxc"
       "nextcloud"
       "microsoft-teams"
+      "microsoft-outlook"
       "obsidian"
       "orion"
       "signal"
