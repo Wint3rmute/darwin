@@ -19,10 +19,7 @@
     home-manager,
     agenix,
   }: let
-    configuration = {
-      pkgs,
-      ...
-    }: {
+    configuration = {pkgs, ...}: {
       home-manager.users.wint3rmute = {
         imports = [
           ./modules/home_packages.nix
@@ -53,7 +50,7 @@
       home-manager.useUserPackages = true;
 
       # Necessary for using flakes on this system.
-      nix.settings.experimental-features = [ "nix-command" "flakes" ];
+      nix.settings.experimental-features = ["nix-command" "flakes"];
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
