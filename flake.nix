@@ -21,7 +21,6 @@
   }: let
     configuration = {
       pkgs,
-      home-manager,
       ...
     }: {
       home-manager.users.wint3rmute = {
