@@ -33,6 +33,7 @@
     typescript-language-server
     typst
     tldr
+    tree
     uv
     yt-dlp
     zola
