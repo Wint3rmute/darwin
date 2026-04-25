@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.darwin.follows = "nixpkgs";
+      inputs.darwin.follows = "nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -19,11 +19,7 @@
     home-manager,
     agenix,
   }: let
-    configuration = {
-      pkgs,
-      home-manager,
-      ...
-    }: {
+    configuration = {pkgs, ...}: {
       home-manager.users.wint3rmute = {
         imports = [
           ./modules/home_packages.nix
@@ -35,7 +31,7 @@
         home.stateVersion = "25.05";
       };
 
-      environment.systemPackages = [agenix.packages.aarch64-darwin.default];
+      environment.systemPackages = [agenix.packages.${pkgs.stdenv.hostPlatform.system}.default];
 
       users.users.wint3rmute = {
         name = "wint3rmute";
@@ -54,7 +50,7 @@
       home-manager.useUserPackages = true;
 
       # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      nix.settings.experimental-features = ["nix-command" "flakes"];
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;

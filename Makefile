@@ -19,6 +19,6 @@ os:
 	sudo softwareupdate -ia
 
 garbage:
-	sudo nix-collect-garbage
+	sudo nix-collect-garbage -d
 
 .PHONY: all fmt flake build switch os garbage commit
