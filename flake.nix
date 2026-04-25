@@ -34,7 +34,7 @@
         home.stateVersion = "25.05";
       };
 
-      environment.systemPackages = [agenix.packages.${pkgs.system}.default];
+      environment.systemPackages = [agenix.packages.${pkgs.stdenv.hostPlatform.system}.default];
 
       users.users.wint3rmute = {
         name = "wint3rmute";
