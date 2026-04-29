@@ -26,6 +26,7 @@
     nodejs
     ollama
     # poetry
+    pre-commit
     rustup
     tinymist
     tmux
