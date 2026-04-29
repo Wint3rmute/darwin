@@ -35,6 +35,7 @@
       "visual-studio-code"
       "vlc"
       "yacreader"
+      "zed"
     ];
     # masApps = {
     #   "Amphetamine" = 937984704;
