@@ -113,6 +113,7 @@
     sd
     uutils-coreutils-noprefix
     wireguard-tools
+    spotify
   ];
 
   # Enable the OpenSSH daemon.
