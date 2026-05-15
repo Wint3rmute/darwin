@@ -44,9 +44,9 @@
       modules = [
         agenix.nixosModules.default
         home-manager.nixosModules.home-manager
-        ./modules/nixos/configuration.nix
-        ./modules/nixos/hardware.nix
-        ./modules/nixos/wireguard.nix
+        ./modules/asus/configuration.nix
+        ./modules/asus/hardware.nix
+        ./modules/asus/wireguard.nix
       ];
     };
   };
