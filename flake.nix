@@ -18,64 +18,35 @@
     nixpkgs,
     home-manager,
     agenix,
-  }: let
-    configuration = {pkgs, ...}: {
-      home-manager.users.wint3rmute = {
-        imports = [
-          ./modules/home_packages.nix
-          ./modules/helix.nix
-          ./modules/git.nix
-          ./modules/nushell/nushell.nix
-        ];
-        home.homeDirectory = "/Users/wint3rmute";
-        home.stateVersion = "25.05";
-      };
-
-      environment.systemPackages = [agenix.packages.${pkgs.stdenv.hostPlatform.system}.default];
-
-      users.users.wint3rmute = {
-        name = "wint3rmute";
-        home = "/Users/wint3rmute";
-        uid = 501;
-
-        shell = pkgs.nushell;
-      };
-      system.primaryUser = "wint3rmute";
-
-      # for programs.zsh.enableCompletion. Comment in docs:
-      # Enable zsh completion. Don’t forget to add
-      environment.pathsToLink = ["/share/zsh"];
-
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = ["nix-command" "flakes"];
-
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 6;
-
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
-
-      nixpkgs.config.allowUnfree = true;
+  }: {
+    formatter = {
+      aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
+      x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
     };
-  in {
-    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
+
     darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
+      specialArgs = {inherit inputs self;};
       modules = [
         agenix.darwinModules.default
-        configuration
         home-manager.darwinModules.home-manager
-        ./modules/hosts.nix
-        ./modules/global_packages.nix
-        ./modules/macos.nix
-        ./modules/homebrew.nix
-        ./modules/wireguard.nix
+        ./modules/darwin/system.nix
+        ./modules/darwin/hosts.nix
+        ./modules/darwin/global_packages.nix
+        ./modules/darwin/macos.nix
+        ./modules/darwin/homebrew.nix
+        ./modules/darwin/wireguard.nix
+      ];
+    };
+
+    nixosConfigurations."asus" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
+      modules = [
+        agenix.nixosModules.default
+        home-manager.nixosModules.home-manager
+        ./modules/nixos/configuration.nix
+        ./modules/nixos/hardware.nix
+        ./modules/nixos/wireguard.nix
       ];
     };
   };

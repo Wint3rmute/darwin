@@ -15,8 +15,15 @@
         {
           name = "typescript";
           auto-format = true;
-          roots = ["deno.json" "deno.jsonc" "package.json"];
-          file-types = ["ts" "tsx"];
+          roots = [
+            "deno.json"
+            "deno.jsonc"
+            "package.json"
+          ];
+          file-types = [
+            "ts"
+            "tsx"
+          ];
           language-servers = ["deno-lsp"];
         }
       ];
