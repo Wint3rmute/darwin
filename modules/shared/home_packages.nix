@@ -39,5 +39,7 @@
     yt-dlp
     zola
     zoxide
+    ripgrep
+    sd
   ];
 }

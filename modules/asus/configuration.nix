@@ -77,9 +77,6 @@
     isNormalUser = true;
     description = "Mateusz Bączek";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
     shell = pkgs.nushell;
   };
 
@@ -95,11 +92,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     amdgpu_top
-    btop
     wget
     git
     gnumake
@@ -109,8 +103,6 @@
     ghostty
     zed-editor
     openconnect
-    ripgrep
-    sd
     uutils-coreutils-noprefix
     wireguard-tools
     spotify
