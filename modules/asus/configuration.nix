@@ -3,12 +3,63 @@
   inputs,
   ...
 }: {
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.wint3rmute = {
+    isNormalUser = true;
+    description = "Mateusz Bączek";
+    extraGroups = ["networkmanager" "wheel"];
+    shell = pkgs.nushell;
+  };
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Install firefox.
+  programs.firefox.enable = true;
+  programs.neovim.enable = true;
+
+  programs.steam.enable = true;
+  programs.gamemode.enable = true;
+
+  # Enable graphics acceleration
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    amdgpu_top
+    wget
+    git
+    gnumake
+    pciutils
+    helix
+    nushell
+    ghostty
+    zed-editor
+    openconnect
+    uutils-coreutils-noprefix
+    wireguard-tools
+    signal-desktop
+    spotify
+  ];
+
+  home-manager.users.wint3rmute = {
+    imports = [
+      ../shared/home_packages.nix
+      ../shared/helix.nix
+      ../shared/git.nix
+      ./nushell.nix
+    ];
+    home.homeDirectory = "/home/wint3rmute";
+    home.stateVersion = "25.05";
+  };
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
   networking.hostName = "asus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -72,42 +123,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.wint3rmute = {
-    isNormalUser = true;
-    description = "Mateusz Bączek";
-    extraGroups = ["networkmanager" "wheel"];
-    shell = pkgs.nushell;
-  };
-
-  # Install firefox.
-  programs.firefox.enable = true;
-  programs.neovim.enable = true;
-  programs.steam.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
-    amdgpu_top
-    wget
-    git
-    gnumake
-    pciutils
-    helix
-    nushell
-    ghostty
-    zed-editor
-    openconnect
-    uutils-coreutils-noprefix
-    wireguard-tools
-    spotify
-  ];
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
@@ -116,6 +131,13 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -124,17 +146,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
-  home-manager.users.wint3rmute = {
-    imports = [
-      ../shared/home_packages.nix
-      ../shared/helix.nix
-      ../shared/git.nix
-      ./nushell.nix
-    ];
-    home.homeDirectory = "/home/wint3rmute";
-    home.stateVersion = "25.05";
-  };
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
 }
