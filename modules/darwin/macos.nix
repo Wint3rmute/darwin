@@ -1,10 +1,5 @@
 # macOS configuration
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+_: {
   system.defaults = {
     # Dock settings
     dock = {

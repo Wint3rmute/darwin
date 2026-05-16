@@ -1,10 +1,5 @@
 # Global apps
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+_: {
   homebrew = {
     enable = true;
     onActivation = {

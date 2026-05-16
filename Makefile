@@ -2,13 +2,16 @@ OS := $(shell uname)
 
 REBUILD := $(if $(filter Darwin,$(OS)), darwin-rebuild, nixos-rebuild)
 
-all: fmt flake build switch commit garbage
+all: fmt flake check build switch commit garbage
 
 fmt:
 	nix fmt .
 
 flake:
 	nix flake update
+
+check:
+	nix flake check --all-systems && statix check && deadnix
 
 build:
 	$(REBUILD) --flake . build
@@ -22,4 +25,4 @@ commit:
 garbage:
 	sudo nix-collect-garbage -d
 
-.PHONY: all fmt flake build switch garbage commit
+.PHONY: all fmt flake check build switch garbage commit

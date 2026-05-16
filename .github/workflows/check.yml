@@ -22,6 +22,12 @@ jobs:
       - name: Check flake
         run: nix flake check --all-systems
 
+      - name: Lint (deadnix)
+        run: nix run nixpkgs#deadnix -- --fail .
+
+      - name: Lint (statix)
+        run: nix run nixpkgs#statix -- check .
+
       - name: Check formatting
         run: |
           nix fmt .

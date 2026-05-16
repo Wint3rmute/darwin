@@ -1,45 +1,40 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     alejandra
-    awscli2
     ansible
+    awscli2
     btop
+    deadnix
     deno
     duf
     entr
     fastfetch
+    fd
     ffmpeg
     fzf
-    fd
     graphviz
-    lilypond-unstable
     jdk
-    # mpv
+    lilypond-unstable
     ncdu
-    nil
     neovim
+    nil
     nmap
     nodejs
     ollama
-    # poetry
     pre-commit
+    ripgrep
     rustup
+    sd
+    statix
     tinymist
+    tldr
     tmux
+    tree
     typescript-language-server
     typst
-    tldr
-    tree
     uv
     yt-dlp
     zola
     zoxide
-    ripgrep
-    sd
   ];
 }
