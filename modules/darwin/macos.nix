@@ -1,8 +1,5 @@
 # macOS configuration
 {
-  config,
-  lib,
-  pkgs,
   ...
 }: {
   system.defaults = {

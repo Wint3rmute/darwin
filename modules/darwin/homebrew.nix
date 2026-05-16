@@ -1,8 +1,5 @@
 # Global apps
 {
-  config,
-  lib,
-  pkgs,
   ...
 }: {
   homebrew = {
