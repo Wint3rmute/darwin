@@ -31,19 +31,21 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     amdgpu_top
-    wget
+    ghostty
     git
     gnumake
-    pciutils
     helix
+    mpv
     nushell
-    ghostty
-    zed-editor
     openconnect
-    uutils-coreutils-noprefix
-    wireguard-tools
+    pciutils
     signal-desktop
     spotify
+    uutils-coreutils-noprefix
+    vlc
+    wget
+    wireguard-tools
+    zed-editor
   ];
 
   home-manager.users.wint3rmute = {
