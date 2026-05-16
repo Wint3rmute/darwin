@@ -27,9 +27,10 @@
     darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
       specialArgs = {inherit inputs self;};
       modules = [
-        agenix.darwinModules.default
         home-manager.darwinModules.home-manager
-        ./modules/darwin/system.nix
+        agenix.darwinModules.default
+        ./modules/shared/agenix.nix
+        ./modules/darwin/configuration.nix
         ./modules/darwin/hosts.nix
         ./modules/darwin/global_packages.nix
         ./modules/darwin/macos.nix
@@ -42,8 +43,9 @@
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
-        agenix.nixosModules.default
         home-manager.nixosModules.home-manager
+        agenix.nixosModules.default
+        ./modules/shared/agenix.nix
         ./modules/asus/configuration.nix
         ./modules/asus/hardware.nix
         ./modules/asus/wireguard.nix

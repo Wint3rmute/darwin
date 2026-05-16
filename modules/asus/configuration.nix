@@ -31,7 +31,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     amdgpu_top
     wget
     git
