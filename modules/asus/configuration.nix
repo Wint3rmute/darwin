@@ -67,6 +67,19 @@
     useUserPackages = true;
   };
 
+  security.sudo.extraRules = [
+  {
+    users = [ "wint3rmute" ];
+    commands = [
+      {
+        command = "/run/current-system/sw/bin/nixos-rebuild";
+        options = [ "NOPASSWD" ];
+      }
+    ];
+  }
+];
+
+
   networking.hostName = "asus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
