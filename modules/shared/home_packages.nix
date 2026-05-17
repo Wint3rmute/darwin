@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
-    alejandra
     ansible
     awscli2
     btop
@@ -18,6 +18,7 @@
     ncdu
     neovim
     nil
+    nixfmt-tree
     nmap
     nodejs
     ollama

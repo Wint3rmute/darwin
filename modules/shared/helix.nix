@@ -19,12 +19,12 @@ _: {
             "ts"
             "tsx"
           ];
-          language-servers = ["deno-lsp"];
+          language-servers = [ "deno-lsp" ];
         }
       ];
       language-server.deno-lsp = {
         command = "deno";
-        args = ["lsp"];
+        args = [ "lsp" ];
         config.deno.enable = true;
       };
     };
