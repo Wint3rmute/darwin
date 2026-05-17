@@ -16,6 +16,7 @@
     neovim.enable = true;
     steam.enable = true;
     gamemode.enable = true;
+    nix-ld.enable = true;
   };
 
   # Enable graphics acceleration
