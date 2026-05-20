@@ -28,6 +28,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Enable AMD GPU's ROCm
+  nixpkgs.config.rocmSupport = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -121,6 +124,7 @@
   # services.xserver.libinput.enable = true;
 
   services = {
+    ollama.enable = true;
     # Enable the X11 windowing system.
     xserver = {
       enable = true;
@@ -150,6 +154,8 @@
     # Enable the OpenSSH daemon.
     openssh.enable = true;
   };
+
+  nix.settings.max-jobs = 1;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
