@@ -12,44 +12,46 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs @ {
-    self,
-    nix-darwin,
-    nixpkgs,
-    home-manager,
-    agenix,
-  }: {
-    formatter = {
-      aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
-      x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
-    };
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+      agenix,
+    }:
+    {
+      formatter = {
+        aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-tree;
+        x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+      };
 
-    darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
-      specialArgs = {inherit inputs self;};
-      modules = [
-        home-manager.darwinModules.home-manager
-        agenix.darwinModules.default
-        ./modules/shared/agenix.nix
-        ./modules/darwin/configuration.nix
-        ./modules/darwin/hosts.nix
-        ./modules/darwin/global_packages.nix
-        ./modules/darwin/macos.nix
-        ./modules/darwin/homebrew.nix
-        ./modules/darwin/wireguard.nix
-      ];
-    };
+      darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit inputs self; };
+        modules = [
+          home-manager.darwinModules.home-manager
+          agenix.darwinModules.default
+          ./modules/shared/agenix.nix
+          ./modules/darwin/configuration.nix
+          ./modules/darwin/hosts.nix
+          ./modules/darwin/global_packages.nix
+          ./modules/darwin/macos.nix
+          ./modules/darwin/homebrew.nix
+          ./modules/darwin/wireguard.nix
+        ];
+      };
 
-    nixosConfigurations."asus" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
-      modules = [
-        home-manager.nixosModules.home-manager
-        agenix.nixosModules.default
-        ./modules/shared/agenix.nix
-        ./modules/asus/configuration.nix
-        ./modules/asus/hardware.nix
-        ./modules/asus/wireguard.nix
-      ];
+      nixosConfigurations."asus" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          home-manager.nixosModules.home-manager
+          agenix.nixosModules.default
+          ./modules/shared/agenix.nix
+          ./modules/asus/configuration.nix
+          ./modules/asus/hardware.nix
+          ./modules/asus/wireguard.nix
+        ];
+      };
     };
-  };
 }

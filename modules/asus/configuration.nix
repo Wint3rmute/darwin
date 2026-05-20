@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.wint3rmute = {
     isNormalUser = true;
@@ -70,11 +71,15 @@
 
   security.sudo.extraRules = [
     {
-      users = ["wint3rmute"];
+      users = [ "wint3rmute" ];
       commands = [
         {
           command = "/run/current-system/sw/bin/nixos-rebuild";
-          options = ["NOPASSWD"];
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/run/current-system/sw/bin/nix-collect-garbage";
+          options = [ "NOPASSWD" ];
         }
       ];
     }

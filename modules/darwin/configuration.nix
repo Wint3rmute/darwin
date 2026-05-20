@@ -2,7 +2,8 @@
   pkgs,
   self,
   ...
-}: {
+}:
+{
   home-manager = {
     users.wint3rmute = {
       imports = [
@@ -36,7 +37,7 @@
 
   # for programs.zsh.enableCompletion. Comment in docs:
   # Enable zsh completion. Don't forget to add
-  environment.pathsToLink = ["/share/zsh"];
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = [

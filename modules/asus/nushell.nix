@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nushell = {
     enable = true;
     configFile.text = builtins.readFile ../shared/nushell/config.nu;

@@ -2,13 +2,15 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   # Collect all extra hosts from different modules
   extraHosts = lib.concatStringsSep "\n" config.networking.extraHostsLines;
-in {
+in
+{
   options.networking.extraHostsLines = lib.mkOption {
     type = lib.types.listOf lib.types.str;
-    default = [];
+    default = [ ];
     description = "Additional lines to add to /etc/hosts";
     example = [
       "# Comment about what this part blocks"
