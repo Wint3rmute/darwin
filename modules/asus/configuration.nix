@@ -51,7 +51,7 @@
     vlc
     wget
     wireguard-tools
-    # zed-editor
+    zed-editor
   ];
 
   home-manager = {
@@ -155,6 +155,9 @@
     openssh.enable = true;
   };
 
+  age.identityPaths = [ "/home/wint3rmute/.ssh/id_ed25519" ];
+
+  # I don't want a slow PC when updating in the background
   nix.settings.max-jobs = 1;
 
   # Open ports in the firewall.

@@ -8,4 +8,5 @@ let
 in
 {
   "wireguard.age".publicKeys = users;
+  "openconnect.age".publicKeys = users;
 }

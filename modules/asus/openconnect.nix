@@ -1,13 +1,24 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  systemd.services.my-cool-user-service = {
+  age.secrets.openconnect = {
+    file = ../../secrets/openconnect.age;
+    path = "/etc/openconnect.conf";
+    owner = "root";
+    mode = "600";
+  };
+
+  systemd.services.openconnect = {
     enable = true;
-    after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
+    after = [ "network-online.target" ];
+    wantedBy = [ ]; # No autostart, that's desired
     description = "Openconnect VPN";
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${pkgs.openconnect}/bin/openconnect -h";
+      RemainAfterExit = "no";
+      ExecStart = ''${pkgs.bash}/bin/bash -c 'echo "$PASSWORD" | ${pkgs.openconnect}/bin/openconnect --protocol="$PROTOCOL" $FLAGS --user="$USERNAME" "$GATEWAY"' '';
+      Restart = "always";
+      RestartSec = "5s";
+      EnvironmentFile = config.age.secrets.openconnect.path;
     };
   };
 
