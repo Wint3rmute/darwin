@@ -1,5 +1,5 @@
 {
-  description = "Wint3rmute's Flake Configuration";
+  description = "Wint3rmute's Machines";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
@@ -51,6 +51,7 @@
           ./modules/asus/configuration.nix
           ./modules/asus/hardware.nix
           ./modules/asus/wireguard.nix
+          ./modules/asus/openconnect.nix
         ];
       };
     };

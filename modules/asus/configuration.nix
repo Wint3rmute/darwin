@@ -44,7 +44,6 @@
     helix
     mpv
     nushell
-    openconnect
     pciutils
     signal-desktop
     spotify
@@ -52,7 +51,7 @@
     vlc
     wget
     wireguard-tools
-    zed-editor
+    # zed-editor
   ];
 
   home-manager = {
