@@ -1,4 +1,6 @@
-$env.config.buffer_editor = 'code';
+$env.config.buffer_editor = 'helix';
+$env.config.edit_mode = 'vi';
+
 $env.PATH = $env.PATH ++ [
   "/run/current-system/sw/bin",
   "/nix/var/nix/profiles/default/bin",
@@ -125,8 +127,8 @@ $env.PROMPT_COMMAND_RIGHT = ""
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
 $env.PROMPT_INDICATOR = ""
-$env.PROMPT_INDICATOR_VI_INSERT = ": "
-$env.PROMPT_INDICATOR_VI_NORMAL = "〉"
+$env.PROMPT_INDICATOR_VI_INSERT = ""
+$env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
 source ~/.config/zoxide.nu
