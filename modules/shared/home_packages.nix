@@ -18,6 +18,7 @@
     ncdu
     neovim
     nil
+    nixfmt
     nixfmt-tree
     nmap
     nodejs
