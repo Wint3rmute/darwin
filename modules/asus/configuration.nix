@@ -40,6 +40,8 @@
     amdgpu_top
     ghostty
     git
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
     gnumake
     helix
     keepassxc
