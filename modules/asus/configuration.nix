@@ -42,7 +42,9 @@
     git
     gnumake
     helix
+    keepassxc
     mpv
+    nextcloud-client
     nushell
     pciutils
     signal-desktop
@@ -51,7 +53,7 @@
     vlc
     wget
     wireguard-tools
-    zed-editor
+    # zed-editor
   ];
 
   home-manager = {
