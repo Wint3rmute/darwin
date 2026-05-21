@@ -29,8 +29,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable AMD GPU's ROCm
-  nixpkgs.config.rocmSupport = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -124,7 +122,10 @@
   # services.xserver.libinput.enable = true;
 
   services = {
-    ollama.enable = true;
+    # ollama = {
+    #   enable = true;
+    #   package = pkgs.ollama-rocm;
+    # };
     # Enable the X11 windowing system.
     xserver = {
       enable = true;
