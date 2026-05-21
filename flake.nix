@@ -26,7 +26,7 @@
         x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
       };
 
-      darwinConfigurations."Mateuszs-MacBook-Air" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."air" = nix-darwin.lib.darwinSystem {
         specialArgs = { inherit inputs self; };
         modules = [
           home-manager.darwinModules.home-manager
