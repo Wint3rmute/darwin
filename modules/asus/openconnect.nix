@@ -1,13 +1,13 @@
 { pkgs, ... }:
 {
-  systemd.user.services.my-cool-user-service = {
+  systemd.services.my-cool-user-service = {
     enable = true;
     after = [ "network.target" ];
     wantedBy = [ "default.target" ];
-    description = "My Cool User Service";
+    description = "Openconnect VPN";
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${pkgs.bash}/bin/bash echo works";
+      ExecStart = "${pkgs.openconnect}/bin/openconnect -h";
     };
   };
 
