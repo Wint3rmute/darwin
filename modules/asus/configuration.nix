@@ -42,6 +42,7 @@
     git
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
     gnumake
     helix
     keepassxc
