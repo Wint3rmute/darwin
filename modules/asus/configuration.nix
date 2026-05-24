@@ -56,7 +56,7 @@
     vlc
     wget
     wireguard-tools
-    # zed-editor
+    zed-editor
   ];
 
   home-manager = {
