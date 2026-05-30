@@ -18,6 +18,22 @@
     steam.enable = true;
     gamemode.enable = true;
     nix-ld.enable = true;
+    hyprland.enable = true;
+    dms-shell = {
+      enable = true;
+      # Core features
+      enableSystemMonitoring = true; # System monitoring widgets (dgop)
+      enableVPN = false; # VPN management widget
+      enableDynamicTheming = true; # Wallpaper-based theming (matugen)
+      enableAudioWavelength = false; # Audio visualizer (cava)
+      enableCalendarEvents = false; # Calendar integration (khal)
+      enableClipboardPaste = true; # Pasting from the clipboard history (wtype)
+      # systemd options
+      systemd = {
+        enable = true; # Systemd service for auto-start
+        restartIfChanged = true; # Auto-restart dms.service when dms-shell changes
+      };
+    };
   };
 
   # Enable graphics acceleration
@@ -146,7 +162,11 @@
     };
     # Enable the GNOME Desktop Environment.
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    # displayManager.dms-greeter = {
+    #   enable = true;
+    #   compositor.name = "hyprland";
+    # };
+    # desktopManager.gnome.enable = true;
     # Enable sound with pipewire.
     pulseaudio.enable = false;
     pipewire = {
