@@ -52,6 +52,7 @@
     pciutils
     signal-desktop
     spotify
+    telegram-desktop
     uutils-coreutils-noprefix
     vlc
     wget
