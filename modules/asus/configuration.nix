@@ -38,6 +38,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     amdgpu_top
+    audacity
     discord
     ghostty
     git
