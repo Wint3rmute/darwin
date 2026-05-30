@@ -38,6 +38,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     amdgpu_top
+    discord
     ghostty
     git
     gnomeExtensions.appindicator
