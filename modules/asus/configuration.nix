@@ -18,10 +18,6 @@
     steam.enable = true;
     gamemode.enable = true;
     nix-ld.enable = true;
-    kdeconnect = {
-      enable = true; # opens firewall ports
-      package = pkgs.gnomeExtensions.gsconnect; # use GSConnect instead of plain kdeconnect
-    };
   };
 
   # Enable graphics acceleration
@@ -46,9 +42,6 @@
     discord
     ghostty
     git
-    gnomeExtensions.appindicator
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.dash-to-dock
     gnumake
     helix
     keepassxc
