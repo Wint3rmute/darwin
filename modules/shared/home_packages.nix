@@ -4,6 +4,7 @@
     ansible
     awscli2
     btop
+    clang
     deadnix
     deno
     duf
