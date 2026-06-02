@@ -2,7 +2,7 @@ OS := $(shell uname)
 
 REBUILD := $(if $(filter Darwin,$(OS)), darwin-rebuild, nixos-rebuild)
 
-all: fmt flake check build switch commit garbage
+all: fmt check flake build switch commit garbage
 
 fmt:
 	nix fmt .
