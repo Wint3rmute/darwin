@@ -8,7 +8,6 @@
     # set as the root user's default shell
     nushell
     openconnect
-    rectangle
     ripgrep
     sd
     uutils-coreutils-noprefix
