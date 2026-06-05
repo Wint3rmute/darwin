@@ -19,6 +19,7 @@
     ncdu
     neovim
     nil
+    nixd
     nixfmt
     nixfmt-tree
     nmap
