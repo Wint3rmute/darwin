@@ -45,6 +45,7 @@
     audacity
     discord
     ghostty
+    gimp
     git
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
