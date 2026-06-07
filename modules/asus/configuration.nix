@@ -43,6 +43,7 @@
   environment.systemPackages = with pkgs; [
     amdgpu_top
     audacity
+    blender
     discord
     ghostty
     gimp
