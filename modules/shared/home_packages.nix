@@ -24,7 +24,6 @@
     nixfmt-tree
     nmap
     nodejs
-    ollama
     pre-commit
     ripgrep
     rustup
