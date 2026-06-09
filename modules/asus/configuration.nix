@@ -144,6 +144,7 @@
     #   package = pkgs.ollama-rocm;
     # };
     # Enable the X11 windowing system.
+    flatpak.enable = true;
     xserver = {
       enable = true;
       # Configure keymap in X11
