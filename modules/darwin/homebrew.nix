@@ -6,6 +6,9 @@ _: {
       autoUpdate = true;
       cleanup = "zap";
       upgrade = true;
+      extraFlags = [
+        "--force-cleanup"
+      ];
     };
     # brews = [
     #   "mas" # Mac App Store CLI
