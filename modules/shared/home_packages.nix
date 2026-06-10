@@ -39,5 +39,7 @@
     yt-dlp
     zola
     zoxide
+  ] ++ lib.optionals stdenv.isDarwin [
+    container
   ];
 }
