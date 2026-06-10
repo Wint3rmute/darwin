@@ -1,45 +1,48 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    ansible
-    awscli2
-    btop
-    clang
-    deadnix
-    deno
-    duf
-    entr
-    fastfetch
-    fd
-    ffmpeg
-    fzf
-    graphviz
-    jdk
-    lilypond-unstable
-    ncdu
-    neovim
-    nil
-    nixd
-    nixfmt
-    nixfmt-tree
-    nmap
-    nodejs
-    pre-commit
-    ripgrep
-    rustup
-    sd
-    statix
-    tinymist
-    tldr
-    tmux
-    tree
-    typescript-language-server
-    typst
-    uv
-    yt-dlp
-    zola
-    zoxide
-  ] ++ lib.optionals stdenv.isDarwin [
-    container
-  ];
+  home.packages =
+    with pkgs;
+    [
+      ansible
+      awscli2
+      btop
+      clang
+      deadnix
+      deno
+      duf
+      entr
+      fastfetch
+      fd
+      ffmpeg
+      fzf
+      graphviz
+      jdk
+      lilypond-unstable
+      ncdu
+      neovim
+      nil
+      nixd
+      nixfmt
+      nixfmt-tree
+      nmap
+      nodejs
+      pre-commit
+      ripgrep
+      rustup
+      sd
+      statix
+      tinymist
+      tldr
+      tmux
+      tree
+      typescript-language-server
+      typst
+      uv
+      yt-dlp
+      zola
+      zoxide
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      container
+    ];
 }
