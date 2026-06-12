@@ -33,6 +33,7 @@ _: {
       "tigervnc"
       "visual-studio-code"
       "vlc"
+      "xquartz"
       "yacreader"
       "zed"
     ];
