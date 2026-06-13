@@ -39,6 +39,7 @@
       typescript-language-server
       typst
       uv
+      sshfs
       yt-dlp
       zola
       zoxide
