@@ -110,6 +110,7 @@ alias gmff = git merge --ff-only
 alias gf = git fetch
 alias gfa = git fetch --all --tags --prune
 alias gcp = git cherry-pick
+alias make = just
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

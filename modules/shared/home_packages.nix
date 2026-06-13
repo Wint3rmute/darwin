@@ -17,6 +17,7 @@
       fzf
       graphviz
       jdk
+      just
       lilypond-unstable
       ncdu
       neovim
