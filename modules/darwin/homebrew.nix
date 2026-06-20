@@ -26,7 +26,6 @@ _: {
       "nextcloud"
       "obsidian"
       "orion"
-      "rectangle"
       "signal"
       "slack"
       "spotify"
