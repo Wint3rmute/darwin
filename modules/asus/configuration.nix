@@ -52,6 +52,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-dock
     gnumake
+    gradia
     helix
     keepassxc
     mpv
