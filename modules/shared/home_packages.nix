@@ -29,8 +29,8 @@
       nodejs
       pre-commit
       ripgrep
-      rustup
       sd
+      sshfs
       statix
       tinymist
       tldr
@@ -39,7 +39,6 @@
       typescript-language-server
       typst
       uv
-      sshfs
       yt-dlp
       zola
       zoxide
