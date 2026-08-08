@@ -9,6 +9,7 @@
       clang
       deadnix
       deno
+      dig
       duf
       entr
       fastfetch
