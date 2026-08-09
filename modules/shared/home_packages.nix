@@ -17,6 +17,7 @@
       ffmpeg
       fzf
       graphviz
+      imagemagick
       jdk
       just
       lilypond-unstable
