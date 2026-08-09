@@ -1,4 +1,4 @@
-_:
+{pkgs, ...}:
 {
   programs = {
     niri.enable = true;
@@ -8,4 +8,9 @@ _:
       systemd.enable = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    fuzzel
+  ];
 }
+
