@@ -13,6 +13,10 @@
 
   # Install firefox.
   programs = {
+    dms-shell = {
+      enable = true;
+      systemd.enable = true;
+    };
     firefox.enable = true;
     neovim.enable = true;
     steam.enable = true;
