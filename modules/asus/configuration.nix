@@ -55,7 +55,6 @@
     gradia
     helix
     keepassxc
-    mpv
     nextcloud-client
     nushell
     pciutils
@@ -75,6 +74,7 @@
         ../shared/home_packages.nix
         ../shared/helix.nix
         ../shared/git.nix
+        ./mpv.nix
         ./nushell.nix
       ];
       home.homeDirectory = "/home/wint3rmute";
@@ -140,10 +140,10 @@
   # services.xserver.libinput.enable = true;
 
   services = {
-    ollama = {
-      enable = true;
-      package = pkgs.ollama-rocm;
-    };
+    # ollama = {
+    #   enable = true;
+    #   package = pkgs.ollama-rocm;
+    # };
     # Enable the X11 windowing system.
     flatpak.enable = true;
     xserver = {
