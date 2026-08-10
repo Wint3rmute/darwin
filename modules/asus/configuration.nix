@@ -131,19 +131,16 @@
   # Configure console keymap
   console.keyMap = "pl2";
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
+  # RealtimeKit system service, which hands out realtime scheduling priority to
+  # user processes on demand. For example, PulseAudio and PipeWire use this to
+  # acquire realtime priority.
   security.rtkit.enable = true;
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   services = {
-    # ollama = {
-    #   enable = true;
-    #   package = pkgs.ollama-rocm;
-    # };
+    ollama = {
+      enable = true;
+      package = pkgs.ollama-rocm;
+    };
     # Enable the X11 windowing system.
     flatpak.enable = true;
     xserver = {
@@ -164,14 +161,7 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
     };
-    # Enable the OpenSSH daemon.
     openssh.enable = true;
   };
 
@@ -184,7 +174,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  # networking.firewall.enable = true;
 
   boot = {
     # Bootloader.
