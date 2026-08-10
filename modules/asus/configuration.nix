@@ -140,10 +140,10 @@
   # services.xserver.libinput.enable = true;
 
   services = {
-    # ollama = {
-    #   enable = true;
-    #   package = pkgs.ollama-rocm;
-    # };
+    ollama = {
+      enable = true;
+      package = pkgs.ollama-rocm;
+    };
     # Enable the X11 windowing system.
     flatpak.enable = true;
     xserver = {
