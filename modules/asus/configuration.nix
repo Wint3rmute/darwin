@@ -139,8 +139,12 @@
   services = {
     ollama = {
       enable = true;
-      package = pkgs.ollama-rocm;
+      # package = pkgs.ollama-rocm;
+      package = pkgs.ollama;
     };
+    # llama-cpp = {
+    #   enable = true;
+    # };
     # Enable the X11 windowing system.
     flatpak.enable = true;
     xserver = {
