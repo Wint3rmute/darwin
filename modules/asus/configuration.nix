@@ -144,6 +144,7 @@
     };
     # llama-cpp = {
     #   enable = true;
+    #   package = pkgs.llama-cpp-rocm;
     # };
     # Enable the X11 windowing system.
     flatpak.enable = true;
