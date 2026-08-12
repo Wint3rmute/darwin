@@ -142,10 +142,10 @@
       # package = pkgs.ollama-rocm;
       package = pkgs.ollama;
     };
-    # llama-cpp = {
-    #   enable = true;
-    #   package = pkgs.llama-cpp-rocm;
-    # };
+    llama-cpp = {
+      enable = true;
+      package = pkgs.llama-cpp-rocm;
+    };
     # Enable the X11 windowing system.
     flatpak.enable = true;
     xserver = {
