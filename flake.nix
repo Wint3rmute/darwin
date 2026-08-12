@@ -52,6 +52,7 @@
           ./modules/asus/hardware.nix
           ./modules/asus/wireguard.nix
           ./modules/asus/openconnect.nix
+          ./modules/asus/llm.nix
           # ./modules/asus/dms.nix
         ];
       };
