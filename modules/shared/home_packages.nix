@@ -19,7 +19,7 @@
       fzf
       graphviz
       imagemagick
-      jdk
+      jq
       just
       lilypond-unstable
       ncdu
