@@ -6,7 +6,6 @@
       ansible
       awscli2
       btop
-      bubblewrap
       clang
       deadnix
       deno
@@ -48,5 +47,8 @@
     ]
     ++ lib.optionals stdenv.hostPlatform.isDarwin [
       container
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isLinux [
+      bubblewrap
     ];
 }
