@@ -44,6 +44,9 @@
     amdgpu_top
     audacity
     blender
+    (btop.override {
+      rocmSupport = true;
+    })
     discord
     ghostty
     gimp
@@ -74,6 +77,7 @@
         ../shared/home_packages.nix
         ../shared/helix.nix
         ../shared/git.nix
+        ../shared/btop.nix
         ./mpv.nix
         ./nushell.nix
       ];
