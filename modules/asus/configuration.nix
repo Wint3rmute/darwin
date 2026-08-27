@@ -55,6 +55,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-dock
     gnumake
+    godot
     gradia
     helix
     keepassxc
