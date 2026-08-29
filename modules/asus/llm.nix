@@ -3,6 +3,8 @@
     ollama = {
       enable = true;
       package = pkgs.ollama-rocm;
+      host = "0.0.0.0";
+      openFirewall = true;
     };
     llama-cpp = {
       enable = true;
