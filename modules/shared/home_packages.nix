@@ -49,5 +49,6 @@
     ]
     ++ lib.optionals stdenv.hostPlatform.isLinux [
       bubblewrap
+      jamulus
     ];
 }
