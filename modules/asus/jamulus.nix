@@ -41,5 +41,6 @@
 
   environment.systemPackages = with pkgs; [
     jamulus
+    qjackctl
   ];
 }
