@@ -20,7 +20,7 @@ _: {
       "firefox"
       "ghostty"
       "gimp"
-      "godot"
+      # "godot"  # Not making any games right now
       "keepassxc"
       "microsoft-teams"
       "nextcloud"
@@ -30,11 +30,11 @@ _: {
       "slack"
       "spotify"
       "telegram"
-      "tigervnc"
+      # "tigervnc"  # Luckily I only need SSH for remote stuff
       "visual-studio-code"
       "vlc"
-      "xquartz"
-      "yacreader"
+      # "xquartz"  # Luckily I don't have to run any cursed X11 apps remotely
+      # "yacreader"  # Great manga reader!
       "zed"
     ];
     # masApps = {
